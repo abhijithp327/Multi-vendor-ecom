@@ -20,9 +20,20 @@ const reviewSchema = new mongoose.Schema({
     },
     comment: {
         type: String,
-        required: true
     },
+    vendorReplay: {
+        comment: String,
+        createdAt: {
+            type: Date,
+            default: Date.now(),
+        },
+    }
 
+}, {
+    timestamps: true
 });
 
-export const review = mongoose.model('Review', reviewSchema)
+reviewSchema.index({ product: 1, user: 1 }, { unique: true });
+
+
+export const Review = mongoose.model('Review', reviewSchema);
