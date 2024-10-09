@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const subscriptionSchema = new mongoose.Schema({
     plan: {
         type: String,
@@ -39,11 +40,20 @@ const vendorSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    slug: {
+        type: String,
+        unique: true,
+        required: true
+    },
     storeDescription: {
         type: String,
         required: true
     },
     storeImage: {
+        type: String,
+        required: true
+    },
+    storeBanner: {
         type: String,
         required: true
     },
@@ -63,6 +73,7 @@ const vendorSchema = new mongoose.Schema({
     }
 
 );
+
 
 
 export const Vendor = mongoose.model("Vendor", vendorSchema);

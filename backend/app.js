@@ -8,6 +8,7 @@ import morgan from 'morgan';
 import { errorHandler, notFoundErrorHandler } from './src/middlewares/errorHandler.js';
 
 import userRoutes from './src/routes/userRoutes.js';
+import vendorRoutes from './src/routes/vendorRoutes.js';
 
 const app = express();
 dotenv.config();
@@ -34,6 +35,7 @@ app.use(morgan('dev'));
 
 // Api routes
 app.use('/api/user', userRoutes);
+app.use('/api/vendor', vendorRoutes);
 
 // Error handler middleware
 // app.use(errorHandler);

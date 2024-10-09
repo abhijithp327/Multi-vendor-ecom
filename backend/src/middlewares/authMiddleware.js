@@ -11,10 +11,8 @@ export const protect = async (req, res, next) => {
         if (!token) {
             return res.status(401).json({
                 status: 401,
-                auth: false,
                 success: false,
-                failed: true,
-                message: "Authentication failed. Token not found"
+                message: "No token attached to header",
             });
         }
 
