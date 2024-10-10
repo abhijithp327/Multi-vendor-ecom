@@ -10,7 +10,7 @@ router.post('/create-wishlist', createWishlist);
 router.delete('/update-wishlists/:wishlistId', updateWishlist);
 router.get('/get-wishlist/:wishlistId', getAWishlist);
 router.get('/get-all-wishlists', getAllWishlist);
-router.delete('/delete-wishlists', deleteWishlist);
+router.delete('/delete-wishlist/:wishlistId', deleteWishlist);
 
 
 export default router;

@@ -14,6 +14,7 @@ import brandRoutes from './src/routes/brandRoutes.js';
 import categoryRoutes from './src/routes/categoryRoutes.js';
 import subcategoryRoutes from './src/routes/subcategoryRoutes.js';
 import wishlistRoutes from './src/routes/wishlistRoutes.js';
+import reviewRoutes from './src/routes/reviewRoutes.js';
 
 
 const app = express();
@@ -47,6 +48,7 @@ app.use('/api/brand', brandRoutes);
 app.use('/api/category', categoryRoutes);
 app.use('/api/subcategory', subcategoryRoutes);
 app.use('/api/wishlist', wishlistRoutes);
+app.use('/api/review', reviewRoutes);
 
 // Error handler middleware
 // app.use(errorHandler);
