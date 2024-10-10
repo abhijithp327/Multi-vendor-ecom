@@ -47,19 +47,19 @@ export const createCategory = async (req, res) => {
 // @access Public
 export const getAllCategory = async (req, res) => {
     try {
-        const subcategories = await Category.find();
+        const categories = await Category.find();
         res.status(201).json({
             status: 201,
             success: true,
             message: "Categorys fetched successfully",
-            data: subcategories
+            data: categories
         });
     } catch (error) {
         console.log(error);
         res.status(500).json({
             status: 500,
             success: false,
-            message: "Error fetching subcategories",
+            message: "Error fetching categories",
             error: error
         });
     }

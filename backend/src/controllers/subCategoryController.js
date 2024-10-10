@@ -95,7 +95,7 @@ export const getSubCategoryBySlug = async (req, res) => {
 export const updateSubCategory = async (req, res) => {
     try {
         const { subcategoryId } = req.params;
-       
+
         const updatedSubCategory = await SubCategory.findByIdAndUpdate(subcategoryId, req.body, {
             new: true
         });
