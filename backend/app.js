@@ -10,6 +10,7 @@ import morgan from 'morgan';
 import userRoutes from './src/routes/userRoutes.js';
 import vendorRoutes from './src/routes/vendorRoutes.js';
 import productRoutes from './src/routes/productRoutes.js';
+import brandRoutes from './src/routes/brandRoutes.js';
 
 const app = express();
 dotenv.config();
@@ -38,6 +39,7 @@ app.use(morgan('dev'));
 app.use('/api/user', userRoutes);
 app.use('/api/vendor', vendorRoutes);
 app.use('/api/product', productRoutes);
+app.use('/api/brand', brandRoutes);
 
 // Error handler middleware
 // app.use(errorHandler);

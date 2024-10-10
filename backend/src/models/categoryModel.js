@@ -11,14 +11,15 @@ const categorySchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    parentCategory: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Category',
+    slug: {
+        type: String,
+        required: true,
+        unique: true
     },
     subCategory: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Category',
+            ref: 'SubCategory',
         },
     ],
 },
