@@ -5,10 +5,11 @@ import mongoose from 'mongoose';
 import helmet from 'helmet';
 import { dbConnect } from './src/utils/dbConfig.js';
 import morgan from 'morgan';
-import { errorHandler, notFoundErrorHandler } from './src/middlewares/errorHandler.js';
+// import { errorHandler, notFoundErrorHandler } from './src/middlewares/errorHandler.js';
 
 import userRoutes from './src/routes/userRoutes.js';
 import vendorRoutes from './src/routes/vendorRoutes.js';
+import productRoutes from './src/routes/productRoutes.js';
 
 const app = express();
 dotenv.config();
@@ -36,6 +37,7 @@ app.use(morgan('dev'));
 // Api routes
 app.use('/api/user', userRoutes);
 app.use('/api/vendor', vendorRoutes);
+app.use('/api/product', productRoutes);
 
 // Error handler middleware
 // app.use(errorHandler);

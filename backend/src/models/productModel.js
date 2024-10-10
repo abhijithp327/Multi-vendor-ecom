@@ -20,7 +20,7 @@ const productVariationSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    
+
 });
 
 
@@ -32,6 +32,11 @@ const productSchema = new mongoose.Schema({
     },
     description: {
         type: String,
+        required: true
+    },
+    slug: {
+        type: String,
+        unique: true,
         required: true
     },
     vendor: {
