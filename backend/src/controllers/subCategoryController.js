@@ -43,7 +43,7 @@ export const createSubCategory = async (req, res) => {
 
 
 // @desc Get all SubCategory
-// @route /api/subcategory/get-all-SubCategorys
+// @route /api/subcategory/get-all-SubCategories
 // @access Public
 export const getAllSubCategory = async (req, res) => {
     try {
