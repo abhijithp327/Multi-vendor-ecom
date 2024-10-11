@@ -132,6 +132,7 @@ export const deleteReview = async (req, res) => {
 // @desc update is approve
 // @route /api/review/approve-review/:reviewId
 // @access Private
+
 export const approveReview = async (req, res) => {
     try {
         const { reviewId } = req.params;
