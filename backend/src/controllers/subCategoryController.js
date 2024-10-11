@@ -68,6 +68,7 @@ export const getAllSubCategory = async (req, res) => {
 // @desc Get a subcategory by slug
 // @route /api/subcategory/get-SubCategory-by-slug/:slug
 // @access Public
+
 export const getSubCategoryBySlug = async (req, res) => {
     try {
         const { slug } = req.params;
