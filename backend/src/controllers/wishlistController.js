@@ -52,6 +52,7 @@ export const getAllWishlist = async (req, res) => {
 // @desc Get a wishlist by slug
 // @route /api/wishlist/get-Wishlist-by-slug/:slug
 // @access Public
+
 export const getAWishlist = async (req, res) => {
     try {
         const { wishlistId } = req.params;
