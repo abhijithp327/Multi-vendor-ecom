@@ -4,6 +4,7 @@ import { Wishlist } from "../models/wishlistModel.js";
 // @desc Create new Wishlist
 // @route /api/wishlist/create-Wishlist
 // @access Private
+
 export const createWishlist = async (req, res) => {
     try {
         const wishlistData = req.body;
