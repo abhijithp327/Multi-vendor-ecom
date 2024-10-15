@@ -10,6 +10,7 @@ const ACCESS_KEY = process.env.ACCESS_KEY;
 const STORAGE_ZONE_NAME = process.env.STORAGE_ZONE_NAME;
 
 
+
 export const uploadFile = async (req, res) => {
     if (!req.file) {
         return res.status(400).json({
